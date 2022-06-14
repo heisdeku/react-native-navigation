@@ -12,6 +12,7 @@
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/bottom-tabs": "^5.x",
     "@react-navigation/drawer": "^5.x",
     "@react-navigation/native": "^5.x",
     "expo": "~45.0.0",
