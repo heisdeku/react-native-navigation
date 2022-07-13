@@ -5,10 +5,14 @@ import { View } from "react-native";
 import DrawerNavigation from "./navigation/DrawerNavigation";
 import TabNavigation from "./navigation/BottomTabNavigation";
 import StackNavigation from "./navigation/StackNavigation";
+import { TopBarNavigator } from "./navigation/TopBarNavigaion";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
-      <StackNavigation />
-    </View>
+    <SafeAreaProvider>
+      <View style={{ flex: 1 }}>
+        <TabNavigation />
+      </View>
+    </SafeAreaProvider>
   );
 }

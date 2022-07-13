@@ -3,6 +3,9 @@ import { Text, View, Button, Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
+
+import { TopBarNavigator } from "./TopBarNavigaion";
+
 function Home() {
   return (
     <View
@@ -80,7 +83,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Contact"
-        component={Contact}
+        component={TopBarNavigator}
         options={{
           tabBarLabel: "Contact",
           tabBarIcon: ({ color, size }) => (
@@ -99,7 +102,11 @@ function MyTabs() {
           tabBarLabel: "About",
           tabBarIcon: ({ color, size }) => (
             <Icon
-              name={Platform.OS === "ios" ? "ios-information-circle" : "md-information-circle"}
+              name={
+                Platform.OS === "ios"
+                  ? "ios-information-circle"
+                  : "md-information-circle"
+              }
               color={color}
               size={size}
             />
