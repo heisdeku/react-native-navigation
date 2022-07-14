@@ -7,11 +7,12 @@ import TabNavigation from "./navigation/BottomTabNavigation";
 import StackNavigation from "./navigation/StackNavigation";
 import { TopBarNavigator } from "./navigation/TopBarNavigaion";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { RouteParamsNavigation } from "./navigation/RouteParamsNavigation";
 export default function App() {
   return (
     <SafeAreaProvider>
-      <View style={{ flex: 1 }}>
-        <TabNavigation />
+      <View style={{ flex: 1, height: "100%" }}>
+        <RouteParamsNavigation />
       </View>
     </SafeAreaProvider>
   );
